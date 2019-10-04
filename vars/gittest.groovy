@@ -1,4 +1,4 @@
-import com.sapient.devops.scm
+import com.devops.scm
 
 def call(body)
 {
