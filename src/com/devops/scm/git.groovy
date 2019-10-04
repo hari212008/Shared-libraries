@@ -12,8 +12,8 @@ def codeCheckout()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
-      this.branch_name = "$branch"
-      cleanWs()
+      println "Branch name in src is " + branch_name
+	cleanWs()
       println "\u001B[32m [INFO] Starting the code checkout. Please wait...\u001B[0m "
       checkout (
         changelog: false,
