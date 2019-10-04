@@ -9,8 +9,10 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
       println "\u001B[32m [INFO] \u001B[0m: Copying EDA&Data processing scripts is \u001B[32m SUCCESSFULL\u001B[0m."
     }
 catch (Exception error) {
-      println "\u001B[41m [ERROR] failed to EDA&Data copy Failed.]"
+      println "\u001B[41m [ERROR] failed to copying EDA&DATA."
       throw error
     }
   }
+  
+
 }

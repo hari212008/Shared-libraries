@@ -17,7 +17,7 @@ def call(body)
        catch (Exception error)
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
-               echo "\u001B[41m[ERROR] ${error copying EDA&DATA}"
+               echo "\u001B[41m[ERROR] ${error} copying EDA&DATA"
                throw error
                                                         }
              }
