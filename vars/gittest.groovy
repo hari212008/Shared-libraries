@@ -1,4 +1,4 @@
-import com.devops.scm
+import com.devops.scm.git
 
 def call(body)
 {
