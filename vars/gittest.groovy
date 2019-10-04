@@ -19,8 +19,6 @@ def call(body)
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
                echo "\u001B[41m[ERROR] ${error}"
-               def notify = new email()
-               notify.sendmail("$stage")
                throw error
                                                         }
              }
