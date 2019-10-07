@@ -1,3 +1,5 @@
+import com.devops.terraform.tfscripts
+
 def call(body)
 {
     def config = [:]
@@ -9,7 +11,7 @@ def call(body)
     {
       try {
             def execute = new tfscripts()
-            execute.terraforminit()
+            execute.terraform_init()
           }
       catch (Exception error)
             {
