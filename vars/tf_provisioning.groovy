@@ -12,9 +12,6 @@ def call(body)
        try {
            def provision  = new tfscripts()
 	       provision.tfInit()
-	       provision.tfPaln()
-        }
-       catch (Exception error)
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
                echo "\u001B[41m[ERROR] ${error}  TF initialization"
@@ -22,5 +19,20 @@ def call(body)
                                                         }
              }
       }
+	stage('Starting TF plan')
+     {
+       try {
+           def provision  = new tfscripts()
+               provision.tfPlan()
+        }
+       catch (Exception error)
+             {
+               wrap([$class: 'AnsiColorBuildWrapper']) {
+               echo "\u001B[41m[ERROR] ${error}  TF plan"
+               throw error
+                                                        }
+             }
+      }
+
 }
 
