@@ -11,7 +11,7 @@ def call(body)
      {
        try {
            def init  = new tfscripts()
-	       init.tfinit()
+	       init.tfInit()
         }
        catch (Exception error)
              {
