@@ -18,7 +18,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
   }
 }
 
-def tfPlan()
+def plan()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
