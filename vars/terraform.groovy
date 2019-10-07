@@ -12,8 +12,8 @@ def call(body)
        try {
            def terraform = new tf()
          // ## println "branch name is ${BRANCH_NAME} "
-           scm.setValue("${config.BRANCH_NAME}")
-           scm.codeCheckout()
+           terraform.setValue("${config.BRANCH_NAME}")
+           terraform.codeCheckout()
 	   }
        catch (Exception error)
              {
