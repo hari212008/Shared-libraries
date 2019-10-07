@@ -25,7 +25,7 @@ stage('Starting TF plan')
      {
        try {
            def provision  = new tfscripts()
-               provision.tfPlan()
+               provision.tfplan()
         }
        catch (Exception error)
              {
