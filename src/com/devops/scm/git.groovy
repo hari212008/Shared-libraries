@@ -3,9 +3,10 @@
 
 package com.devops.scm
 
-void setValue(String brname)
+void setValue(String brname, String scm_url)
 {
    this.branch_name = brname
+   this.url = scm_url
 } 
 
 def codeCheckout()
@@ -24,7 +25,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
         doGenerateSubmoduleConfigurations: false,
         extensions: [],
         submoduleCfg: [],
-        userRemoteConfigs: [[url: 'https://github.com/hari212008/Erv.git']]
+        userRemoteConfigs: [[url: "${url"]]
         ]
         )
       println "\u001B[32m [INFO] \u001B[0m: Code checkout from \u001B[32m${branch_name}\u001B[0m is \u001B[32m SUCCESSFULL\u001B[0m."

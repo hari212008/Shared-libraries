@@ -12,7 +12,7 @@ def call(body)
        try {
            def scm = new git()
 	 // ## println "branch name is ${BRANCH_NAME} "
-           scm.setValue("${config.BRANCH_NAME}")
+           scm.setValue("${config.BRANCH_NAME}","${config.SCM_URL}")
            scm.codeCheckout()
            }
        catch (Exception error)
