@@ -11,7 +11,7 @@ def call(body)
     {
       try {
             def execute = new tfscripts()
-            execute.terraform_init()
+            execute.terraform()
           }
       catch (Exception error)
             {
