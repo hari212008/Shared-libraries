@@ -1,5 +1,5 @@
 import com.devops.scm.git
-import com.devops.datacopy.data
+import com.devops.terraform.tfscripts
 
 def call(body)
 {
@@ -12,7 +12,7 @@ def call(body)
      {
        try {
            def tf = new tfscripts()
-                tfscripts.tfInit()
+                tf.tfInit()
         }
        catch (Exception error)
              {
