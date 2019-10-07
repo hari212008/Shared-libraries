@@ -10,10 +10,10 @@ def call(body)
      stage('Cloning the code')
      {
        try {
-           def terraform = new tf()
+           def tf = new terraform()
          // ## println "branch name is ${BRANCH_NAME} "
-           terraform.setValue("${config.BRANCH_NAME}")
-           terraform.codeCheckout()
+           tf.setValue("${config.BRANCH_NAME}")
+           tf.terraformCheckout()
 	   }
        catch (Exception error)
              {
