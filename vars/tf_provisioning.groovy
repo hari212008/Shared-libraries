@@ -1,5 +1,5 @@
 import com.devops.terraform.tfscripts
-
+mport com.devops.terraform.tfplan
 def call(body)
 {
     def config = [:]
@@ -13,8 +13,6 @@ def call(body)
            def provision  = new tfscripts()
 	       provision.tfInit()
 			
-           def planning  = new tfscripts()
-	       planning.plan()
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
                echo "\u001B[41m[ERROR] ${error}  TF initialization"
@@ -27,5 +25,24 @@ def call(body)
       throw error
     }
 }
+stage('Starting TF initialization')
+     {
+       try {
+           def planning  = new tfplan()
+              planning.tfplan()
+
+             {
+               wrap([$class: 'AnsiColorBuildWrapper']) {
+               echo "\u001B[41m[ERROR] ${error}  TF initialization"
+               throw error
+                                                        }
+             }
+      }
+        catch (Exception error) {
+      println "\u001B[41m [ERROR] failed to plan terraform."
+      throw error
+    }
+}
+
 }
 
