@@ -25,7 +25,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
         doGenerateSubmoduleConfigurations: false,
         extensions: [],
         submoduleCfg: [],
-        userRemoteConfigs: [[url: '${url']]
+        userRemoteConfigs: [[url: "${url}"]]
         ]
         )
       println "\u001B[32m [INFO] \u001B[0m: Code checkout from \u001B[32m${branch_name}\u001B[0m is \u001B[32m SUCCESSFULL\u001B[0m."
