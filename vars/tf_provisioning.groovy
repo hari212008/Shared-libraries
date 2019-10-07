@@ -19,6 +19,7 @@ def call(body)
                                                         }
              }
       }
+}
 	stage('Starting TF plan')
      {
        try {
@@ -34,6 +35,6 @@ def call(body)
              }
       }
 
-}
+
 }
 
