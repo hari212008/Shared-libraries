@@ -12,6 +12,8 @@ def call(body)
        try {
            def provision  = new tfscripts()
 	       provision.tfInit()
+	       provision.tfPaln()
+	       provision.tfPaln()
         }
        catch (Exception error)
              {
