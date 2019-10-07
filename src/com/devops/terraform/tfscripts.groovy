@@ -1,6 +1,6 @@
-package com.devops.terraform
+package com.devops.execute
 
-def tfInit()
+def terraform()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
