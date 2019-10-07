@@ -10,8 +10,8 @@ def call(body)
      stage('Starting TF initialization')
      {
        try {
-           def init  = new tf()
-	       init.tfinit
+           def init  = new tfscripts()
+	       init.tfinit()
         }
        catch (Exception error)
              {
