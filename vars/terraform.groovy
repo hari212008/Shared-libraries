@@ -1,4 +1,4 @@
-import com.devops.terraform
+import com.devops.terraform.terraform
 
 def call(body)
 {
