@@ -11,7 +11,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
             }
       println "\u001B[32m [INFO] \u001B[0m: TF initialization is \u001B[32m SUCCESSFULL\u001B[0m."
     }
-catch (Exception error) {
+    catch (Exception error) {
       println "\u001B[41m [ERROR] failed to initialize terraform."
       throw error
     }
@@ -29,7 +29,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
     }
       println "\u001B[32m [INFO] \u001B[0m: TF initialization is \u001B[32m SUCCESSFULL\u001B[0m."
     }
-catch (Exception error) {
+    catch (Exception error) {
       println "\u001B[41m [ERROR] failed to plan terraform."
       throw error
     }
