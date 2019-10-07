@@ -21,4 +21,32 @@ def call(body)
              }
 }
 }
+stage('Starting TF plan')
+     {
+       try {
+           def provision  = new tfscripts()
+               provision.tfPlan()
+        }
+       catch (Exception error)
+             {
+               wrap([$class: 'AnsiColorBuildWrapper']) {
+               echo "\u001B[41m[ERROR] ${error}  TF initialization"
+               throw error
+                                                        }
+             }
+      }
+      stage('Starting TF apply')
+     {
+       try {
+           def provision  = new tfscripts()
+               provision.tfapply()
+        }
+       catch (Exception error)
+             {
+               wrap([$class: 'AnsiColorBuildWrapper']) {
+               echo "\u001B[41m[ERROR] ${error}  TF initialization"
+               throw error
+                                                        }
+             }
+      }
 }
