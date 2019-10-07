@@ -1,4 +1,4 @@
-package com.devops.scm
+package com.devops.terraform
 
 void setValue(String brname)
 {

@@ -1,6 +1,4 @@
 import com.devops.scm.terraform
-import com.devops.scm.git
-import com.devops.datacopy.data
 
 def call(body)
 {
