@@ -12,7 +12,9 @@ def call(body)
        try {
            def provision  = new tfscripts()
 	       provision.tfInit()
-	       provision.tfPlan()
+			
+           def plan  = new tfscripts()
+	       plan.tfPlan()
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
                echo "\u001B[41m[ERROR] ${error}  TF initialization"
