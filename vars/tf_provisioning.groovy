@@ -20,6 +20,10 @@ def call(body)
                                                         }
              }
       }
+	catch (Exception error) {
+      println "\u001B[41m [ERROR] failed to plan terraform."
+      throw error
+    }
 }
 }
 
