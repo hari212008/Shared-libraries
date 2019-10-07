@@ -18,8 +18,7 @@ def call(body)
                wrap([$class: 'AnsiColorBuildWrapper']) {
                echo "\u001B[41m[ERROR] ${error}  TF initialization"
                throw error
-                                                        }
              }
-      }
 }
-
+}
+}
