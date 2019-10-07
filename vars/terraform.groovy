@@ -12,7 +12,7 @@ def call(body)
        try {
            def tf = new terraform()
          // ## println "branch name is ${BRANCH_NAME} "
-           tf.setValue("${config.BRANCH_NAME}")
+           terraform.setValue("${config.BRANCH_NAME}")
            tf.terraformCheckout()
 	   }
        catch (Exception error)
