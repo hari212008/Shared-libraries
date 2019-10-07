@@ -1,5 +1,6 @@
 import com.devops.terraform.tfscripts
-mport com.devops.terraform.tfplan
+import com.devops.terraform.tfplan
+
 def call(body)
 {
     def config = [:]

@@ -35,18 +35,3 @@ stage('Starting TF plan')
                                                         }
              }
       }
-      stage('Starting TF apply')
-     {
-       try {
-           def provision  = new tfscripts()
-               provision.tfapply()
-        }
-       catch (Exception error)
-             {
-               wrap([$class: 'AnsiColorBuildWrapper']) {
-               echo "\u001B[41m[ERROR] ${error}  TF initialization"
-               throw error
-                                                        }
-             }
-      }
-}
