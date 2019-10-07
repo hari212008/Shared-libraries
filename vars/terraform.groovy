@@ -12,9 +12,9 @@ def call(body)
        try {
            def terraform = new tf()
          // ## println "branch name is ${BRANCH_NAME} "
-           terraform.setValue("${config.BRANCH_NAME}")
-           terraform.codeCheckout()
-           }
+           scm.setValue("${config.BRANCH_NAME}")
+           scm.codeCheckout()
+	   }
        catch (Exception error)
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
