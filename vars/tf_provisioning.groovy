@@ -26,6 +26,7 @@ def call(body)
       throw error
     }
 }
+}
 def call(body)
 {
     def config = [:]
@@ -51,6 +52,5 @@ def call(body)
       throw error
     }
 }
-
 }
 
