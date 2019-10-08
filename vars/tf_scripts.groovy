@@ -8,7 +8,7 @@ def call(body)
     body.delegate = config
     body()
 
-    stage('Preparing CI Environment')
+    stage('Terraform Initilization')
     {
       try {
             def execute = new tfscripts()
