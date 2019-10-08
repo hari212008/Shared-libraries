@@ -8,6 +8,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
       dir ('erv/'){
         sh 'terraform --version'
         sh 'terraform init'
+ 	sh 'terraform plan'
             }
       println "\u001B[32m [INFO] \u001B[0m: TF initialization is \u001B[32m SUCCESSFULL\u001B[0m."
     }
