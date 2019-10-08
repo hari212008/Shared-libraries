@@ -1,4 +1,5 @@
 import com.devops.terraform.tfscripts
+import com.devops.scm.git
 
 def call(body)
 {

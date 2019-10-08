@@ -1,4 +1,4 @@
-package com.devops.execute
+package com.devops.terraform
 
 def terraform()
 {
