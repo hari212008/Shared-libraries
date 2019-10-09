@@ -2,10 +2,8 @@ package com.devops.terraform
 
 void setValue(String action)
 {
-   	println "function startedi with set value" + action
 	this.tfaction = action
 	env.tfaction = action
-	println "tfaction is" + tfaction
 }
 
 
@@ -20,7 +18,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
         terraform "${tfaction}"
 '''    
 	}
-      println "\u001B[32m [INFO] \u001B[0m: TF initialization is \u001B[32m SUCCESSFULL\u001B[0m." + action
+      println "\u001B[32m [INFO] \u001B[0m: TF initialization is \u001B[32m SUCCESSFULL\u001B[0m."
     }
     catch (Exception error) {
       println "\u001B[41m [ERROR] failed to initialize terraform."
