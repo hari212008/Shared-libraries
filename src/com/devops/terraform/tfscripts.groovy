@@ -2,8 +2,9 @@ package com.devops.terraform
 
 void setValue(String action)
 {
-   	println "function startedi with set value"
+   	println "function startedi with set value" + action
 	this.tfaction = action
+	println "tfaction is" + tfaction
 }
 
 
