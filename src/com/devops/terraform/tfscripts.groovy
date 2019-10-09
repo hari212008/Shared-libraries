@@ -14,12 +14,10 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
       println "\u001B[32m [INFO] Starting TF action. Please wait...\u001B[0m "
       dir ('erv/'){
-        sh 
-	'''
-	echo "action is $tfaction"
-	terraform "${tfaction}"
-	'''
-	    }
+	sh label: '', script: '''echo "action is $tfaction"
+        terraform "${tfaction}"
+'''    
+	}
       println "\u001B[32m [INFO] \u001B[0m: TF initialization is \u001B[32m SUCCESSFULL\u001B[0m." + action
     }
     catch (Exception error) {
