@@ -4,6 +4,7 @@ void setValue(String action)
 {
    	println "function startedi with set value" + action
 	this.tfaction = action
+	env.tfaction = action
 	println "tfaction is" + tfaction
 }
 
