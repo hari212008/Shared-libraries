@@ -2,7 +2,8 @@ package com.devops.terraform
 
 void setValue(String action)
 {
-   this.tfaction = action
+   	println "function startedi with set value"
+	this.tfaction = action
 }
 
 
@@ -11,7 +12,7 @@ def terraform()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
-      println "\u001B[32m [INFO] Starting TF action. Please wait...\u001B[0m " + action
+      println "\u001B[32m [INFO] Starting TF action. Please wait...\u001B[0m "
       dir ('erv/'){
         sh 'terraform "${tfaction}"'
 	    }

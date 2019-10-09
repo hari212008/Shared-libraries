@@ -12,8 +12,9 @@ def call(body)
     {
       try {
             def execute = new tfscripts()
-	    execute.setValue("${config.action}")	            
-	    execute.terraform()
+	    execute.setValue("${config.actions}")	            
+	println "calling tf function"    
+	execute.terraform()
 		          
 }
       catch (Exception error)
