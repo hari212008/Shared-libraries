@@ -12,8 +12,10 @@ def call(body)
     {
       try {
             def execute = new tfscripts()
-            execute.terraform()
-          }
+	    execute.setValue("${config.action}")	            
+	    execute.terraform()
+		          
+}
       catch (Exception error)
             {
               wrap([$class: 'AnsiColorBuildWrapper']) {
