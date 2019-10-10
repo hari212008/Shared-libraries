@@ -4,10 +4,6 @@ void setValue(String script, String path)
 env.script_name = script
 this.dir_path = path
 }
-if path == "null"
-{
-this.dir_path = $WORKSPACE
-}
 def pyt()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
