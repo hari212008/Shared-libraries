@@ -5,8 +5,8 @@ def push()
 wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
 		println "\u001B[32m [INFO] Copying Build and push processing scripts. Please wait...\u001B[0m "    
-		dir ('erv/src/Deployment/')
-		sh 'sudo ls -lrth'
+	//	dir('erv/src/Deployment/')
+		sh 'sudo ls -lrth erv/src/Deployment/'
 
 
  // println "\u001B[32m [INFO] Copying EDA&Data processing scripts. Please wait...\u001B[0m "
