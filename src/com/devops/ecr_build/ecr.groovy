@@ -15,7 +15,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
 		sh 'ls -lrth erv/src/Deployment/'
 		echo "$imagename"
 		sh '$(aws ecr get-login)'			
-		sh 'bash erv/src/Deployment/build_and_push.sh ecr v$BUILD_ID'
+		sh 'bash build_and_push.sh ecr v$BUILD_ID'
     }
 catch (Exception error) {
       println "\u001B[41m [ERROR] failed to copying EDA&DATA."
