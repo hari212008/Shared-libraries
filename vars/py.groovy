@@ -12,7 +12,7 @@ def call(body)
      {
        try {
            def  training_py = new script()
-               training_py.python()
+               training_py.pyt()
         }
        catch (Exception error)
              {
