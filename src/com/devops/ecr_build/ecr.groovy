@@ -12,8 +12,6 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
 		println "\u001B[32m [INFO] Copying Build and push processing scripts. Please wait...\u001B[0m "    
 		dir('erv/src/Deployment/') {
-		sh 'ls -lart'
-		sh 'ls -lrth erv/src/Deployment/'
 		echo "$imagename"
 		sh '$(aws ecr get-login)'			
 		sh 'bash build_and_push.sh ecr v$BUILD_ID'
