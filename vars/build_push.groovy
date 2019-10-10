@@ -14,7 +14,8 @@ def call(body)
      {
        try {
            def build = new ecr()
-		 println "${ecr}" 
+		 println "test object:"
+		 println "${build}" 
 //                execute.setValue("${config.image_name}")
 		build.push()
         }
