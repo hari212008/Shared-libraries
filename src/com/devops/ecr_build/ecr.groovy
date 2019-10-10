@@ -13,7 +13,8 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
 		println "\u001B[32m [INFO] Copying Build and push processing scripts. Please wait...\u001B[0m "    
 	//	dir('erv/src/Deployment/')
 		sh 'sudo ls -lrth erv/src/Deployment/'
-		echo "$imagename"			
+		echo "$imagename"
+		sh '$(aws ecr get-login)'			
 		sh 'bash erv/src/Deployment/build_and_push.sh ecr v1'	
  // println "\u001B[32m [INFO] Copying EDA&Data processing scripts. Please wait...\u001B[0m "
       //  sh 'sudo cp -R erv/ /jenkins/terraform/modules/usecase-setup/source'
