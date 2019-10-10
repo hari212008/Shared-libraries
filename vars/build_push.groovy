@@ -1,6 +1,5 @@
 import com.devops.scm.git
 import com.devops.ecr_build.ecr
-import com.devops.terraform.tfscripts
 
 
 def call(body)
@@ -15,8 +14,6 @@ def call(body)
        try {
            def build = new ecr()
 		 println "test object:"
-		 println "${build}" 
-//                execute.setValue("${config.image_name}")
 		build.push()
         }
        catch (Exception error)
