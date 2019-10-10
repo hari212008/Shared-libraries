@@ -11,7 +11,7 @@ def call(body)
      stage('Invoking  Training Job')
      {
        try {
-           def  training_py = new script()
+           def  training_py = new training_py()
                training_py.pyt()
         }
        catch (Exception error)
