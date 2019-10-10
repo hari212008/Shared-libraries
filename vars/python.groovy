@@ -1,5 +1,5 @@
 import com.devops.scm.git
-import com.devops.scripts.script
+import com.devops.scripts.training_py
 
 def call(body)
 {
@@ -11,8 +11,8 @@ def call(body)
      stage('Invoking  Training Job')
      {
        try {
-           def scripts = new script()
-               scripts.python()
+           def  training_py = new script()
+               training_py.python()
         }
        catch (Exception error)
              {
