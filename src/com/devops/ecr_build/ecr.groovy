@@ -1,5 +1,12 @@
 package com.devops.ecr_build
 
+void setValue(String action)
+{
+this.imagename = image_name
+        env.tfaction = image_name 
+}
+
+
 def push()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
@@ -7,7 +14,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
 		println "\u001B[32m [INFO] Copying Build and push processing scripts. Please wait...\u001B[0m "    
 	//	dir('erv/src/Deployment/')
 		sh 'sudo ls -lrth erv/src/Deployment/'
-
+		echo "$imagename"			
 
  // println "\u001B[32m [INFO] Copying EDA&Data processing scripts. Please wait...\u001B[0m "
       //  sh 'sudo cp -R erv/ /jenkins/terraform/modules/usecase-setup/source'
