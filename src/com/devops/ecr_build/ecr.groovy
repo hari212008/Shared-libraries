@@ -3,7 +3,6 @@ package com.devops.ecr_build
 void setValue(String image_name)
 {
 this.imagename = image_name
- //       env.tfaction = image_name 
 }
 
 
@@ -15,7 +14,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
 	//	dir('erv/src/Deployment/')
 		sh 'sudo ls -lrth erv/src/Deployment/'
 		echo "$imagename"			
-
+		sh 'bash build_and_push.sh "$imagename" v1'	
  // println "\u001B[32m [INFO] Copying EDA&Data processing scripts. Please wait...\u001B[0m "
       //  sh 'sudo cp -R erv/ /jenkins/terraform/modules/usecase-setup/source'
     //  println "\u001B[32m [INFO] \u001B[0m: Copying EDA&Data processing scripts is \u001B[32m SUCCESSFULL\u001B[0m."
