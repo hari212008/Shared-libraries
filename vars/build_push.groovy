@@ -12,7 +12,8 @@ def call(body)
      {
        try {
            def build = new ecr()
-                build.push()
+                execute.setValue("${config.image_name}")
+		build.push()
         }
        catch (Exception error)
              {
