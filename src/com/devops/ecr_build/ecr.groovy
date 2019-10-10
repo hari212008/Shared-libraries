@@ -1,6 +1,6 @@
 package com.devops.ecr_build
 
-def copying()
+def push()
 {
 wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
