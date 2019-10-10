@@ -7,7 +7,7 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
     try {
                 println "\u001B[32m [INFO] Invoking traninig Job Please wait...\u001B[0m "
                 dir('erv/src/') {
-                sh 'python.sh'
+		sh label: '', script: 'sh python.sh'
         }
     }
 catch (Exception error) {
