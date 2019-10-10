@@ -1,9 +1,9 @@
 package com.devops.ecr_build
 
-void setValue(String action)
+void setValue(String image_name)
 {
 this.imagename = image_name
-        env.tfaction = image_name 
+ //       env.tfaction = image_name 
 }
 
 
