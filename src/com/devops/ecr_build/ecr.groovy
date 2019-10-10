@@ -15,9 +15,10 @@ wrap([$class: 'AnsiColorBuildWrapper']) {
         dir ('erv/src/Deployment/')
 	echo '$image_name'
         echo "$imagename"
-	sh '$(aws ecr get-login)'
+	sh 'ls -lrth'
+//	sh '$(aws ecr get-login)'
 //	sh 'bash build_and_push.sh churn v$BUILD_ID'
-	sh 'bash build_and_push.sh churn v1' 
+//	sh 'bash build_and_push.sh churn v1' 
      println "\u001B[32m [INFO] \u001B[0m: Copying EDA&Data processing scripts is \u001B[32m SUCCESSFULL\u001B[0m."
     }
 catch (Exception error) {
