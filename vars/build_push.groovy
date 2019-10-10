@@ -1,7 +1,6 @@
 import com.devops.scm.git
 import com.devops.ecr_build.ecr
 
-
 def call(body)
 {
     def config = [:]
@@ -9,17 +8,16 @@ def call(body)
     body.delegate = config
     body()
 
-     stage('Build and push --> ECR')
+     stage('Copying EDA&Data processing scripts')
      {
        try {
-           def build = new ecr()
-		 println "test object:"
-		build.push()
+           def image = new ecr()
+                image.push()
         }
        catch (Exception error)
              {
                wrap([$class: 'AnsiColorBuildWrapper']) {
-               echo "\u001B[41m[ERROR] ${error} Pushing ECR Image"
+               echo "\u001B[41m[ERROR] ${error} copying EDA&DATA"
                throw error
                                                         }
              }
